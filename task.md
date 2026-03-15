@@ -1,0 +1,23 @@
+# To-Do List Proje Görevleri
+
+- [x] Faz 1: Temel Kurulum ve Veri Katmanı (Storage)
+  - [x] Proje dizin yapısını oluştur
+  - [x] Gerekli kütüphaneleri (toml vb.) belirle ve `requirements.txt` oluştur
+  - [x] TOML dosyası ile iletişim kuracak (okuma/yazma) `storage.py` modülünü yaz
+- [x] Faz 2: Görev Mantığı (To-Do Logic)
+  - [x] `todo.py` oluştur ve temel veri yapısını (Task) kurgula
+  - [x] `add` fonksiyonunu entegre et (görev ekleme)
+  - [x] `remove` fonksiyonunu entegre et (görev silme)
+  - [x] `update` fonksiyonunu entegre et (✔ / ✖ durum güncelleme)
+- [x] Faz 3: Kullanıcı Arayüzü (CLI Entegrasyonu)
+  - [x] `main.py` içerisine `argparse` ile komut satırı argümanlarını tanımla:
+    - [x] `-h, --help` (Yardım menüsü)
+    - [x] `-a, --add` (Yeni görev ekleme)
+    - [x] `-r, --remove` (Görev silme)
+    - [x] `-u, --update` (`+` veya `-` alarak tick/çarpı durumu güncelleme)
+    - [x] `-l, --list` (Görevleri listeleme)
+  - [x] Liste görüntüleme fonksiyonunu yaz ve emojilerle (✔, ✖) destekle
+  - [x] Argümanları arka plandaki `todo.py` fonksiyonlarına bağla
+- [x] Faz 4: Test ve Doğrulama
+  - [x] Temel senaryoların testini yap
+  - [x] Hata yakalama (olmayan görevi silmeyi denemek vb.) mekanizmalarını kontrol et
