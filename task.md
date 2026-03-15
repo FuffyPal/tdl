@@ -1,23 +1,23 @@
-# To-Do List Proje Görevleri
+# To-Do List Project Tasks
 
-- [x] Faz 1: Temel Kurulum ve Veri Katmanı (Storage)
-  - [x] Proje dizin yapısını oluştur
-  - [x] Gerekli kütüphaneleri (toml vb.) belirle ve `requirements.txt` oluştur
-  - [x] TOML dosyası ile iletişim kuracak (okuma/yazma) `storage.py` modülünü yaz
-- [x] Faz 2: Görev Mantığı (To-Do Logic)
-  - [x] `todo.py` oluştur ve temel veri yapısını (Task) kurgula
-  - [x] `add` fonksiyonunu entegre et (görev ekleme)
-  - [x] `remove` fonksiyonunu entegre et (görev silme)
-  - [x] `update` fonksiyonunu entegre et (✔ / ✖ durum güncelleme)
-- [x] Faz 3: Kullanıcı Arayüzü (CLI Entegrasyonu)
-  - [x] `main.py` içerisine `argparse` ile komut satırı argümanlarını tanımla:
-    - [x] `-h, --help` (Yardım menüsü)
-    - [x] `-a, --add` (Yeni görev ekleme)
-    - [x] `-r, --remove` (Görev silme)
-    - [x] `-u, --update` (`+` veya `-` alarak tick/çarpı durumu güncelleme)
-    - [x] `-l, --list` (Görevleri listeleme)
-  - [x] Liste görüntüleme fonksiyonunu yaz ve emojilerle (✔, ✖) destekle
-  - [x] Argümanları arka plandaki `todo.py` fonksiyonlarına bağla
-- [x] Faz 4: Test ve Doğrulama
-  - [x] Temel senaryoların testini yap
-  - [x] Hata yakalama (olmayan görevi silmeyi denemek vb.) mekanizmalarını kontrol et
+- [x] Phase 1: Basic Setup and Data Layer (Storage)
+  - [x] Create project directory structure
+  - [x] Determine required libraries (toml, etc.) and create `requirements.txt`
+  - [x] Write `storage.py` module to communicate (read/write) with the TOML file
+- [x] Phase 2: Task Logic (To-Do Logic)
+  - [x] Create `todo.py` and construct the basic data structure (Task)
+  - [x] Integrate `add` function (adding a task)
+  - [x] Integrate `remove` function (deleting a task)
+  - [x] Integrate `update` function (updating ✔ / ✖ status)
+- [x] Phase 3: User Interface (CLI Integration)
+  - [x] Define command line arguments in `main.py` using `argparse`:
+    - [x] `-h, --help` (Help menu)
+    - [x] `-a, --add` (Add a new task)
+    - [x] `-r, --remove` (Delete a task)
+    - [x] `-u, --update` (Update tick/cross status by taking `+` or `-`)
+    - [x] `-l, --list` (List tasks)
+  - [x] Write list display function and support it with emojis (✔, ✖)
+  - [x] Connect arguments to background `todo.py` functions
+- [x] Phase 4: Testing and Validation
+  - [x] Test basic scenarios
+  - [x] Check error handling mechanisms (trying to delete a non-existent task, etc.)

@@ -1,52 +1,52 @@
-# To-Do List Uygulaması Planı
+# To-Do List Application Plan
 
-Bu belge, Python ile geliştirilecek TOML tabanlı To-Do List (Yapılacaklar Listesi) uygulamasının mimarisini, dosya ağacını ve geliştirme fazlarını (aşamalarını) içerir.
+This document contains the architecture, file tree, and development phases for the TOML-based To-Do List application to be developed with Python.
 
-## Dosya Ağacı (Tree)
+## File Tree
 
-Projenizi modüler ve yönetilebilir kılmak için aşağıdaki yapı kullanılacaktır:
+The following structure will be used to make your project modular and manageable:
 
 ```text
 to-do-list/
 ├── src/
 │   ├── __init__.py
-│   ├── main.py          # Uygulamanın ana giriş noktası (komutların alındığı yer)
-│   ├── todo.py          # ToDo iş mantığı (Add, Remove, Update görevleri)
-│   └── storage.py       # TOML dosyasını okuma/yazma işlemleri
+│   ├── main.py          # Main entry point of the application (where commands are received)
+│   ├── todo.py          # ToDo business logic (Add, Remove, Update tasks)
+│   └── storage.py       # TOML file read/write operations
 ├── data/
-│   └── todos.toml       # Görevlerin kaydedileceği veritabanı dosyası
-├── requirements.txt     # Bağımlılıklar (örn. tomli-w veya toml)
-└── README.md            # Proje açıklaması ve kullanım kılavuzu
+│   └── todos.toml       # Database file where tasks will be saved
+├── requirements.txt     # Dependencies (e.g., tomli-w or toml)
+└── README.md            # Project description and user manual
 ```
 
-## Fazlar (Aşamalar)
+## Phases
 
-### Faz 1: Temel Kurulum ve Veri Katmanı (Storage)
-- Proje için gerekli klasör yapısının (`src/`, `data/`) oluşturulması.
-- Python ile TOML okuma/yazma işlemleri için uygun kütüphanenin seçilmesi (Standart kütüphane `tomllib` Python 3.11'de okuma için var, yazma için harici bir modül gerekecek).
-- `storage.py` modülü içinde `todos.toml` dosyasını sorunsuzca okuyan ve dosyaya yeni içerik yazan fonksiyonların oluşturulması.
+### Phase 1: Basic Setup and Data Layer (Storage)
+- Creating the required folder structure (`src/`, `data/`) for the project.
+- Selecting appropriate libraries for TOML read/write operations with Python (Standard library `tomllib` is available for reading in Python 3.11, an external module will be needed for writing).
+- Creating functions within the `storage.py` module to smoothly read the `todos.toml` file and write new content to the file.
 
-### Faz 2: Görev İş Mantığı (To-Do Logic)
-- `todo.py` dosyasında ana görev yönetim fonksiyonlarının yazılması:
-  - **Add**: Listeye yeni bir görev ekleme.
-  - **Remove**: Başlığına veya benzersiz ID'sine (sıra numarası tabanlı) göre görev silme.
-  - **Update**: Bir görevi "Tick" (✔) veya "Çarpı" (✖) olarak güncelleme (Tamamlandı veya Tamamlanmadı durumu atama).
+### Phase 2: Task Business Logic (To-Do Logic)
+- Writing main task management functions in the `todo.py` file:
+  - **Add**: Adding a new task to the list.
+  - **Remove**: Deleting a task by its title or unique ID (sequence number-based).
+  - **Update**: Updating a task as "Tick" (✔) or "Cross" (✖) (Assigning Completed or Not Completed status).
 
-### Faz 3: Kullanıcı Arayüzü (CLI Entegrasyonu)
-- `main.py` içerisine `argparse` kullanılarak detaylı bir Komut Satırı Arayüzü eklenecek.
-- Uygulama aşağıdaki argümanları ve kısayollarını destekleyecek:
-  - `-h` veya `--help`: Yardım menüsünü ve komut kullanımlarını gösterir.
-  - `-a` veya `--add`: Yeni bir To-Do maddesi ekler. (Örn: `python src/main.py -a "Ekmek al"`)
-  - `-r` veya `--remove`: Belirtilen bir görevi ID'sine veya adına göre siler. (Örn: `python src/main.py -r 1`)
-  - `-u` veya `--update`: Bir görevin tamamlanma durumunu günceller.
-    - `+` parametresi alırsa göreve tick (✔) işareti koyar (tamamlandı). (Örn: `python src/main.py -u 1 +`)
-    - `-` parametresi alırsa göreve çarpı (✖) işareti koyar (tamamlanmadı). (Örn: `python src/main.py -u 1 -`)
-  - `-l` veya `--list`: Mevcut tüm görevleri durum emojileriyle (✔, ✖) birlikte listeler. (Örn: `python src/main.py -l`)
-- Kullanıcının konsoldan girdiği değerler parse edilerek, `todo.py` mantık modülündeki ilgili metotlara aktarılacak.
+### Phase 3: User Interface (CLI Integration)
+- A detailed Command Line Interface will be added into `main.py` using `argparse`.
+- The application will support the following arguments and their shortcuts:
+  - `-h` or `--help`: Shows the help menu and command usages.
+  - `-a` or `--add`: Adds a new To-Do item. (e.g., `python src/main.py -a "Buy bread"`)
+  - `-r` or `--remove`: Deletes a specified task by its ID or name. (e.g., `python src/main.py -r 1`)
+  - `-u` or `--update`: Updates the completion status of a task.
+    - If it takes a `+` parameter, it marks the task with a tick (✔) (completed). (e.g., `python src/main.py -u 1 +`)
+    - If it takes a `-` parameter, it marks the task with a cross (✖) (not completed). (e.g., `python src/main.py -u 1 -`)
+  - `-l` or `--list`: Lists all current tasks along with their status emojis (✔, ✖). (e.g., `python src/main.py -l`)
+- Values entered by the user from the console will be parsed and passed to the relevant methods in the `todo.py` logic module.
 
-### Faz 4: Test ve Doğrulama
-- Her fonksiyonelleğin test edilmesi (veri ekledikten sonra TOML tablosunun doğruluğunu teyit etme vs.).
-- Kullanıcı veri hatalarına ve dosya bulunamama gibi durumlara karşı uygun uyarılar yazdırılması (Error Handling).
+### Phase 4: Testing and Validation
+- Testing each functionality (verifying the correctness of the TOML table after adding data, etc.).
+- Printing appropriate warnings for situations such as user data errors and file not found (Error Handling).
 
 ## User Review Required
-Plan ana hatlarıyla bu şekilde. Özellikle **CLI** (Komut Satırı Arayüzü) üzerinden çalışacak bir uygulama kurguladım. Plan sizin için uygunsa onay verebilirsiniz; eğer değiştirmek veya eklemek istediğiniz detaya girmemiz gereken başka özellikler varsa bildirebilirsiniz.
+This is the plan in broad strokes. I have specifically designed an application that will run via the **CLI** (Command Line Interface). If the plan is suitable for you, you can give your approval; if there are other features or details you want to modify or add, please let me know.
