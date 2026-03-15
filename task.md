@@ -21,3 +21,10 @@
 - [x] Phase 4: Testing and Validation
   - [x] Test basic scenarios
   - [x] Check error handling mechanisms (trying to delete a non-existent task, etc.)
+
+- [ ] Phase 5: Graphical User Interface (GTK4+ & libadwaita)
+  - [ ] Set up PyGObject and libadwaita dependencies
+  - [ ] Design the main cross-platform application window with a HeaderBar
+  - [ ] Create UI components (Task list, Add button, status toggles)
+  - [ ] Connect UI signals directly to the `todo.py` logic
+  - [ ] Prepare the application for cross-platform distribution

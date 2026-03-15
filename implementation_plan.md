@@ -48,5 +48,15 @@ to-do-list/
 - Testing each functionality (verifying the correctness of the TOML table after adding data, etc.).
 - Printing appropriate warnings for situations such as user data errors and file not found (Error Handling).
 
+### Phase 5: Graphical User Interface (GTK4+ & libadwaita)
+- Transitioning the application to a modern, cross-platform Graphical User Interface.
+- Integrating **GTK4+** and **libadwaita** using `PyGObject` to provide a native, fast, and adaptive look.
+- Building the UI components:
+  - Main application window with a HeaderBar.
+  - A responsive list view to display the To-Do tasks and their statuses.
+  - Input fields and buttons to add, remove, and toggle tasks.
+- Binding the GTK UI elements directly to the existing `todo.py` and `storage.py` business logic.
+- Configuring the Python application for cross-platform packaging and distribution (Linux, macOS, Windows).
+
 ## User Review Required
-This is the plan in broad strokes. I have specifically designed an application that will run via the **CLI** (Command Line Interface). If the plan is suitable for you, you can give your approval; if there are other features or details you want to modify or add, please let me know.
+This is the plan in broad strokes. Earlier, the application was designed to run solely via the **CLI**. With the addition of **Phase 5**, we will be building a fully cross-platform graphical application using **GTK4+** and **libadwaita**. If this updated plan is suitable for you, you can give your approval; if there are other features or details you want to modify or add, please let me know.
