@@ -1,0 +1,212 @@
+[2026-04-13T17:14:06.105Z] Dev Containers 0.447.0 in VS Code 1.115.0 (41dd792b5e652393e7787322889ed5fdc58bd75b).
+[2026-04-13T17:14:06.105Z] Start: Resolving Remote
+[2026-04-13T17:14:06.218Z] Setting up container for folder or workspace: /home/flaouve/Projects/tdl
+[2026-04-13T17:14:06.218Z] Host: unix:///run/user/1000/podman/podman.sock
+[2026-04-13T17:14:06.225Z] Start: Check Docker is running
+[2026-04-13T17:14:06.225Z] Start: Run: podman version
+[2026-04-13T17:14:06.256Z] Client:        Podman Engine
+Version:       5.8.1
+API Version:   5.8.1
+Go Version:    go1.25.7 X:nodwarf5
+Git Commit:    c6077f645788743258a1a749f8005b4fb3cbe533
+Built:         Wed Mar 11 03:00:00 2026
+Build Origin:  Fedora Project
+OS/Arch:       linux/amd64
+[2026-04-13T17:14:06.257Z] Stop (32 ms): Run: podman version
+[2026-04-13T17:14:06.258Z] Stop (33 ms): Check Docker is running
+[2026-04-13T17:14:06.258Z] Start: Run: podman volume ls -q
+[2026-04-13T17:14:06.288Z] Stop (30 ms): Run: podman volume ls -q
+[2026-04-13T17:14:06.289Z] Start: Run: podman ps -q -a --filter label=vsch.local.folder=/home/flaouve/Projects/tdl --filter label=vsch.quality=stable
+[2026-04-13T17:14:06.322Z] Stop (33 ms): Run: podman ps -q -a --filter label=vsch.local.folder=/home/flaouve/Projects/tdl --filter label=vsch.quality=stable
+[2026-04-13T17:14:06.322Z] Start: Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl --filter label=devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json
+[2026-04-13T17:14:06.351Z] Stop (29 ms): Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl --filter label=devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json
+[2026-04-13T17:14:06.352Z] Start: Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:06.386Z] Stop (34 ms): Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:06.387Z] Start: Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl
+[2026-04-13T17:14:06.417Z] Stop (30 ms): Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl
+[2026-04-13T17:14:06.417Z] Start: Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:06.450Z] Stop (33 ms): Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:06.450Z] Running Dev Containers CLI:   up --user-data-folder /home/flaouve/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --docker-path podman --docker-compose-path podman-compose --container-session-data-folder /tmp/devcontainers-7b6261bb-528d-4bf6-9f5d-866d12705f481776100445050 --workspace-folder /home/flaouve/Projects/tdl --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/home/flaouve/Projects/tdl --id-label devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/flaouve/Projects/tdl/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+[2026-04-13T17:14:06.451Z] Start: Run: /usr/share/code/code /home/flaouve/.vscode/extensions/ms-vscode-remote.remote-containers-0.447.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/flaouve/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --docker-path podman --docker-compose-path podman-compose --container-session-data-folder /tmp/devcontainers-7b6261bb-528d-4bf6-9f5d-866d12705f481776100445050 --workspace-folder /home/flaouve/Projects/tdl --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/home/flaouve/Projects/tdl --id-label devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/flaouve/Projects/tdl/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+[2026-04-13T17:14:06.623Z] @devcontainers/cli 0.83.3. Node.js v22.22.1. linux 6.19.11-200.fc43.x86_64 x64.
+[2026-04-13T17:14:06.623Z] Start: Run: podman buildx version
+[2026-04-13T17:14:06.676Z] Stop (53 ms): Run: podman buildx version
+[2026-04-13T17:14:06.676Z] buildah 1.43.0
+[2026-04-13T17:14:06.676Z] 
+[2026-04-13T17:14:06.676Z] Start: Run: podman version --format {{.Server.Version}}
+[2026-04-13T17:14:06.699Z] Stop (23 ms): Run: podman version --format {{.Server.Version}}
+[2026-04-13T17:14:06.699Z] 5.8.1
+[2026-04-13T17:14:06.699Z] 
+[2026-04-13T17:14:06.700Z] Start: Run: podman -v
+[2026-04-13T17:14:06.722Z] Stop (22 ms): Run: podman -v
+[2026-04-13T17:14:06.722Z] Start: Resolving Remote
+[2026-04-13T17:14:06.725Z] Start: Run: git rev-parse --show-cdup
+[2026-04-13T17:14:06.729Z] Stop (4 ms): Run: git rev-parse --show-cdup
+[2026-04-13T17:14:06.732Z] Loading 147 extra certificates from /etc/ssl/certs/ca-certificates.crt.
+[2026-04-13T17:14:07.480Z] Start: Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl --filter label=devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json
+[2026-04-13T17:14:07.513Z] Stop (33 ms): Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl --filter label=devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json
+[2026-04-13T17:14:07.514Z] Start: Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:07.551Z] Stop (37 ms): Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:07.552Z] Start: Starting container
+[2026-04-13T17:14:07.552Z] Start: Run: podman start 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.674Z] 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.678Z] Stop (126 ms): Run: podman start 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.678Z] Stop (126 ms): Starting container
+[2026-04-13T17:14:07.678Z] Start: Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl --filter label=devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json
+[2026-04-13T17:14:07.712Z] Stop (34 ms): Run: podman ps -q -a --filter label=devcontainer.local_folder=/home/flaouve/Projects/tdl --filter label=devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json
+[2026-04-13T17:14:07.713Z] Start: Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:07.748Z] Stop (35 ms): Run: podman inspect --type container 343e0738a41b
+[2026-04-13T17:14:07.750Z] Start: Inspecting container
+[2026-04-13T17:14:07.750Z] Start: Run: podman inspect --type container 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.795Z] Stop (45 ms): Run: podman inspect --type container 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.795Z] Stop (45 ms): Inspecting container
+[2026-04-13T17:14:07.796Z] Start: Run in container: /bin/sh
+[2026-04-13T17:14:07.801Z] Start: Run in container: uname -m
+[2026-04-13T17:14:07.850Z] x86_64
+[2026-04-13T17:14:07.850Z] 
+[2026-04-13T17:14:07.850Z] Stop (49 ms): Run in container: uname -m
+[2026-04-13T17:14:07.850Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2026-04-13T17:14:07.851Z] PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.3
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[2026-04-13T17:14:07.851Z] 
+[2026-04-13T17:14:07.851Z] Stop (1 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2026-04-13T17:14:07.852Z] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[2026-04-13T17:14:07.854Z] Stop (2 ms): Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[2026-04-13T17:14:07.854Z] Start: Run in container: [ ! -e '/root' ] || [ -w '/root' ]
+[2026-04-13T17:14:07.855Z] 
+[2026-04-13T17:14:07.855Z] 
+[2026-04-13T17:14:07.855Z] Exit code 1
+[2026-04-13T17:14:07.855Z] Stop (1 ms): Run in container: [ ! -e '/root' ] || [ -w '/root' ]
+[2026-04-13T17:14:07.855Z] Start: Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[2026-04-13T17:14:07.856Z] 
+[2026-04-13T17:14:07.856Z] 
+[2026-04-13T17:14:07.856Z] Stop (1 ms): Run in container: test -f '/var/devcontainer/.patchEtcEnvironmentMarker'
+[2026-04-13T17:14:07.856Z] Start: Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[2026-04-13T17:14:07.856Z] 
+[2026-04-13T17:14:07.856Z] 
+[2026-04-13T17:14:07.856Z] Stop (0 ms): Run in container: test -f '/var/devcontainer/.patchEtcProfileMarker'
+[2026-04-13T17:14:07.856Z] Stop (1134 ms): Resolving Remote
+[2026-04-13T17:14:07.865Z] Stop (1414 ms): Run: /usr/share/code/code /home/flaouve/.vscode/extensions/ms-vscode-remote.remote-containers-0.447.0/dist/spec-node/devContainersSpecCLI.js up --user-data-folder /home/flaouve/.config/Code/User/globalStorage/ms-vscode-remote.remote-containers/data --docker-path podman --docker-compose-path podman-compose --container-session-data-folder /tmp/devcontainers-7b6261bb-528d-4bf6-9f5d-866d12705f481776100445050 --workspace-folder /home/flaouve/Projects/tdl --workspace-mount-consistency cached --gpu-availability detect --id-label devcontainer.local_folder=/home/flaouve/Projects/tdl --id-label devcontainer.config_file=/home/flaouve/Projects/tdl/.devcontainer/devcontainer.json --log-level debug --log-format json --config /home/flaouve/Projects/tdl/.devcontainer/devcontainer.json --default-user-env-probe loginInteractiveShell --mount type=volume,source=vscode,target=/vscode,external=true --skip-post-create --update-remote-user-uid-default on --mount-workspace-git-root --include-configuration --include-merged-configuration
+[2026-04-13T17:14:07.865Z] Start: Run: podman inspect --type container 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.906Z] Stop (41 ms): Run: podman inspect --type container 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.906Z] Start: Run: podman exec -i -u root 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29 /bin/sh -c echo "New container started. Keep-alive process started." ; export VSCODE_REMOTE_CONTAINERS_SESSION=7b6261bb-528d-4bf6-9f5d-866d12705f481776100445050 ; /bin/sh
+[2026-04-13T17:14:07.908Z] Start: Inspecting container
+[2026-04-13T17:14:07.908Z] Start: Run: podman inspect --type container 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.966Z] New container started. Keep-alive process started.
+[2026-04-13T17:14:07.978Z] Stop (70 ms): Run: podman inspect --type container 343e0738a41bbe7fbc4a9c7eb18258bf96f6ee6680981d669f1e979da6a70c29
+[2026-04-13T17:14:07.978Z] Stop (70 ms): Inspecting container
+[2026-04-13T17:14:07.980Z] Start: Run in container: /bin/sh
+[2026-04-13T17:14:07.988Z] Start: Run in container: uname -m
+[2026-04-13T17:14:08.031Z] x86_64
+[2026-04-13T17:14:08.032Z] 
+[2026-04-13T17:14:08.032Z] Stop (44 ms): Run in container: uname -m
+[2026-04-13T17:14:08.032Z] Start: Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2026-04-13T17:14:08.034Z] PRETTY_NAME="Debian GNU/Linux 13 (trixie)"
+NAME="Debian GNU/Linux"
+VERSION_ID="13"
+VERSION="13 (trixie)"
+VERSION_CODENAME=trixie
+DEBIAN_VERSION_FULL=13.3
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+[2026-04-13T17:14:08.034Z] 
+[2026-04-13T17:14:08.034Z] Stop (2 ms): Run in container: (cat /etc/os-release || cat /usr/lib/os-release) 2>/dev/null
+[2026-04-13T17:14:08.034Z] Start: Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[2026-04-13T17:14:08.036Z] Stop (2 ms): Run in container:  (command -v getent >/dev/null 2>&1 && getent passwd 'vscode' || grep -E '^vscode|^[^:]*:[^:]*:vscode:' /etc/passwd || true)
+[2026-04-13T17:14:08.036Z] Start: Run in container: [ ! -e '/root' ] || [ -w '/root' ]
+[2026-04-13T17:14:08.037Z] 
+[2026-04-13T17:14:08.037Z] 
+[2026-04-13T17:14:08.037Z] Exit code 1
+[2026-04-13T17:14:08.037Z] Stop (1 ms): Run in container: [ ! -e '/root' ] || [ -w '/root' ]
+[2026-04-13T17:14:08.038Z] Start: Setup shutdown monitor
+[2026-04-13T17:14:08.039Z] Forking shutdown monitor: /home/flaouve/.vscode/extensions/ms-vscode-remote.remote-containers-0.447.0/dist/shutdown/shutdownMonitorProcess /run/user/1000/vscode-remote-containers-f3ed11f1-fdcf-4edb-a1ee-2f17687701b7.sock singleContainer Debug /home/flaouve/.config/Code/logs/20260413T201329/window1/exthost/ms-vscode-remote.remote-containers 1776100445990
+[2026-04-13T17:14:08.047Z] Stop (9 ms): Setup shutdown monitor
+[2026-04-13T17:14:08.047Z] Start: Run in container: test -d '/home/vscode/.vscode-server'
+[2026-04-13T17:14:08.048Z] 
+[2026-04-13T17:14:08.049Z] 
+[2026-04-13T17:14:08.049Z] Stop (2 ms): Run in container: test -d '/home/vscode/.vscode-server'
+[2026-04-13T17:14:08.049Z] Start: Run in container: test ! -f '/home/vscode/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/home/vscode/.vscode-server/data/Machine' && { > '/home/vscode/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[2026-04-13T17:14:08.050Z] 
+[2026-04-13T17:14:08.050Z] 
+[2026-04-13T17:14:08.050Z] Exit code 1
+[2026-04-13T17:14:08.050Z] Stop (1 ms): Run in container: test ! -f '/home/vscode/.vscode-server/data/Machine/.writeMachineSettingsMarker' && set -o noclobber && mkdir -p '/home/vscode/.vscode-server/data/Machine' && { > '/home/vscode/.vscode-server/data/Machine/.writeMachineSettingsMarker' ; } 2> /dev/null
+[2026-04-13T17:14:08.050Z] Start: Run in container: cat /home/vscode/.vscode-server/data/Machine/settings.json
+[2026-04-13T17:14:08.051Z] {
+	"github.copilot.chat.codeGeneration.instructions": [
+		{
+			"text": "This dev container includes an up-to-date version of Git, built from source as needed, pre-installed and available on the `PATH`."
+		},
+		{
+			"text": "This dev container includes Go and common Go utilities pre-installed and available on the `PATH`, along with the Go language extension for Go development."
+		},
+		{
+			"text": "This dev container includes `node`, `npm` and `eslint` pre-installed and available on the `PATH` for Node.js and JavaScript development."
+		},
+		{
+			"text": "This dev container includes an up-to-date version of Git, built from source as needed, pre-installed and available on the `PATH`."
+		},
+		{
+			"text": "This dev container includes Git Large File Support (Git LFS) along with needed dependencies pre-installed and available on the `PATH`."
+		},
+		{
+			"text": "This workspace is in a dev container running on \"Debian GNU/Linux 13 (trixie)\".\n\nUse `\"$BROWSER\" <url>` to open a webpage in the host's default browser.\n\nSome of the command line tools available on the `PATH`: `apt`, `dpkg`, `git`, `curl`, `wget`, `ssh`, `scp`, `rsync`, `gpg`, `ps`, `lsof`, `netstat`, `top`, `tree`, `find`, `grep`, `zip`, `unzip`, `tar`, `gzip`, `bzip2`, `xz`"
+		}
+	],
+	"go.toolsManagement.checkForUpdates": "local",
+	"go.useLanguageServer": true,
+	"go.gopath": "/go"
+}
+[2026-04-13T17:14:08.051Z] 
+[2026-04-13T17:14:08.051Z] Stop (1 ms): Run in container: cat /home/vscode/.vscode-server/data/Machine/settings.json
+[2026-04-13T17:14:08.052Z] Start: Run in container: test ! -f '/home/vscode/.vscode-server/data/Machine/.writeMachineMCPConfigMarker' && set -o noclobber && mkdir -p '/home/vscode/.vscode-server/data/Machine' && { > '/home/vscode/.vscode-server/data/Machine/.writeMachineMCPConfigMarker' ; } 2> /dev/null
+[2026-04-13T17:14:08.053Z] 
+[2026-04-13T17:14:08.053Z] 
+[2026-04-13T17:14:08.053Z] Exit code 1
+[2026-04-13T17:14:08.053Z] Stop (1 ms): Run in container: test ! -f '/home/vscode/.vscode-server/data/Machine/.writeMachineMCPConfigMarker' && set -o noclobber && mkdir -p '/home/vscode/.vscode-server/data/Machine' && { > '/home/vscode/.vscode-server/data/Machine/.writeMachineMCPConfigMarker' ; } 2> /dev/null
+[2026-04-13T17:14:08.054Z] Start: Run in container: test -d '/home/vscode/.vscode-server/bin/41dd792b5e652393e7787322889ed5fdc58bd75b'
+[2026-04-13T17:14:08.054Z] 
+[2026-04-13T17:14:08.054Z] 
+[2026-04-13T17:14:08.054Z] Stop (0 ms): Run in container: test -d '/home/vscode/.vscode-server/bin/41dd792b5e652393e7787322889ed5fdc58bd75b'
+[2026-04-13T17:14:08.055Z] Start: Run in container: test -d '/vscode/vscode-server/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b'
+[2026-04-13T17:14:08.055Z] 
+[2026-04-13T17:14:08.055Z] 
+[2026-04-13T17:14:08.055Z] Stop (0 ms): Run in container: test -d '/vscode/vscode-server/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b'
+[2026-04-13T17:14:08.056Z] Start: Run in container: /bin/sh
+[2026-04-13T17:14:08.061Z] Start: Run in container: test -x '/home/vscode/.vscode-server/bin/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/helpers/check-requirements.sh'
+[2026-04-13T17:14:08.061Z] Start: Run in container: touch '/vscode/vscode-server/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b'
+[2026-04-13T17:14:08.062Z] 
+[2026-04-13T17:14:08.062Z] 
+[2026-04-13T17:14:08.062Z] Stop (1 ms): Run in container: test -x '/home/vscode/.vscode-server/bin/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/helpers/check-requirements.sh'
+[2026-04-13T17:14:08.062Z] Start: Run in container: '/home/vscode/.vscode-server/bin/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/helpers/check-requirements.sh'
+[2026-04-13T17:14:08.113Z] 
+[2026-04-13T17:14:08.114Z] 
+[2026-04-13T17:14:08.114Z] Stop (53 ms): Run in container: touch '/vscode/vscode-server/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b'
+[2026-04-13T17:14:08.115Z] 
+[2026-04-13T17:14:08.115Z] 
+[2026-04-13T17:14:08.115Z] Stop (53 ms): Run in container: '/home/vscode/.vscode-server/bin/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/helpers/check-requirements.sh'
+[2026-04-13T17:14:08.115Z] Start: Launching Dev Containers helper.
+[2026-04-13T17:14:08.116Z] ssh-agent: SSH_AUTH_SOCK in container (/tmp/vscode-ssh-auth-dc3b78b4-9aba-45b8-af9c-8fd9b4d126ce.sock) forwarded to local host (/run/user/1000/gcr/ssh).
+[2026-04-13T17:14:08.116Z] Start: Run in container: test -e /tmp/.X11-unix/X0
+[2026-04-13T17:14:08.117Z] 
+[2026-04-13T17:14:08.117Z] 
+[2026-04-13T17:14:08.117Z] Exit code 1
+[2026-04-13T17:14:08.117Z] Stop (1 ms): Run in container: test -e /tmp/.X11-unix/X0
+[2026-04-13T17:14:08.117Z] Start: Run in container: mkdir -p '/tmp/.X11-unix'
+[2026-04-13T17:14:08.120Z] 
+[2026-04-13T17:14:08.120Z] mkdir: cannot create directory '/tmp/.X11-unix': Permission denied
+[2026-04-13T17:14:08.120Z] Exit code 1
+[2026-04-13T17:14:08.121Z] Stop (4 ms): Run in container: mkdir -p '/tmp/.X11-unix'
+[2026-04-13T17:14:08.125Z] Command in container failed: mkdir -p '/tmp/.X11-unix'
+[2026-04-13T17:14:08.125Z] mkdir: cannot create directory '/tmp/.X11-unix': Permission denied
+[2026-04-13T17:14:08.125Z] Exit code 1
+
